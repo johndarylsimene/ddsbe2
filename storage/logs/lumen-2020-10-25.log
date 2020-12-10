@@ -1,0 +1,96 @@
+[2020-10-25 17:19:57] local.ERROR: Symfony\Component\Debug\Exception\FatalErrorException: Class 'App\Models\Models' not found in C:\xampp\htdocs\myApp\app\Models\User.php:5
+Stack trace:
+#0 C:\xampp\htdocs\myApp\vendor\laravel\lumen-framework\src\Concerns\RegistersExceptionHandlers.php(54): Laravel\Lumen\Application->handleShutdown()
+#1 [internal function]: Laravel\Lumen\Application->Laravel\Lumen\Concerns\{closure}()
+#2 {main} {"exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalErrorException(code: 1): Class 'App\\Models\\Models' not found at C:\\xampp\\htdocs\\myApp\\app\\Models\\User.php:5)
+[stacktrace]
+#0 C:\\xampp\\htdocs\\myApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RegistersExceptionHandlers.php(54): Laravel\\Lumen\\Application->handleShutdown()
+#1 [internal function]: Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}()
+#2 {main}
+"} 
+[2020-10-25 17:21:11] local.ERROR: Symfony\Component\Debug\Exception\FatalErrorException: Class 'App\Models\Models' not found in C:\xampp\htdocs\myApp\app\Models\User.php:5
+Stack trace:
+#0 C:\xampp\htdocs\myApp\vendor\laravel\lumen-framework\src\Concerns\RegistersExceptionHandlers.php(54): Laravel\Lumen\Application->handleShutdown()
+#1 [internal function]: Laravel\Lumen\Application->Laravel\Lumen\Concerns\{closure}()
+#2 {main} {"exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalErrorException(code: 1): Class 'App\\Models\\Models' not found at C:\\xampp\\htdocs\\myApp\\app\\Models\\User.php:5)
+[stacktrace]
+#0 C:\\xampp\\htdocs\\myApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RegistersExceptionHandlers.php(54): Laravel\\Lumen\\Application->handleShutdown()
+#1 [internal function]: Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}()
+#2 {main}
+"} 
+[2020-10-25 17:29:51] local.ERROR: ErrorException: Undefined variable: password in C:\xampp\htdocs\myApp\app\Http\Controllers\UserController.php:34
+Stack trace:
+#0 C:\xampp\htdocs\myApp\app\Http\Controllers\UserController.php(34): Laravel\Lumen\Application->Laravel\Lumen\Concerns\{closure}(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 34, Array)
+#1 [internal function]: App\Http\Controllers\UserController->validation()
+#2 C:\xampp\htdocs\myApp\vendor\illuminate\container\BoundMethod.php(32): call_user_func_array(Array, Array)
+#3 C:\xampp\htdocs\myApp\vendor\illuminate\container\BoundMethod.php(90): Illuminate\Container\BoundMethod::Illuminate\Container\{closure}()
+#4 C:\xampp\htdocs\myApp\vendor\illuminate\container\BoundMethod.php(34): Illuminate\Container\BoundMethod::callBoundMethod(Object(Laravel\Lumen\Application), Array, Object(Closure))
+#5 C:\xampp\htdocs\myApp\vendor\illuminate\container\Container.php(576): Illuminate\Container\BoundMethod::call(Object(Laravel\Lumen\Application), Array, Array, NULL)
+#6 C:\xampp\htdocs\myApp\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(376): Illuminate\Container\Container->call(Array, Array)
+#7 C:\xampp\htdocs\myApp\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(342): Laravel\Lumen\Application->callControllerCallable(Array, Array)
+#8 C:\xampp\htdocs\myApp\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(316): Laravel\Lumen\Application->callLumenController(Object(App\Http\Controllers\UserController), 'validation', Array)
+#9 C:\xampp\htdocs\myApp\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(278): Laravel\Lumen\Application->callControllerAction(Array)
+#10 C:\xampp\htdocs\myApp\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(263): Laravel\Lumen\Application->callActionOnArrayBasedRoute(Array)
+#11 C:\xampp\htdocs\myApp\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(165): Laravel\Lumen\Application->handleFoundRoute(Array)
+#12 C:\xampp\htdocs\myApp\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(416): Laravel\Lumen\Application->Laravel\Lumen\Concerns\{closure}(Object(Laravel\Lumen\Http\Request))
+#13 C:\xampp\htdocs\myApp\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(171): Laravel\Lumen\Application->sendThroughPipeline(Array, Object(Closure))
+#14 C:\xampp\htdocs\myApp\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(108): Laravel\Lumen\Application->dispatch(NULL)
+#15 C:\xampp\htdocs\myApp\public\index.php(28): Laravel\Lumen\Application->run()
+#16 {main} {"exception":"[object] (ErrorException(code: 0): Undefined variable: password at C:\\xampp\\htdocs\\myApp\\app\\Http\\Controllers\\UserController.php:34)
+[stacktrace]
+#0 C:\\xampp\\htdocs\\myApp\\app\\Http\\Controllers\\UserController.php(34): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}(8, 'Undefined varia...', 'C:\\\\xampp\\\\htdocs...', 34, Array)
+#1 [internal function]: App\\Http\\Controllers\\UserController->validation()
+#2 C:\\xampp\\htdocs\\myApp\\vendor\\illuminate\\container\\BoundMethod.php(32): call_user_func_array(Array, Array)
+#3 C:\\xampp\\htdocs\\myApp\\vendor\\illuminate\\container\\BoundMethod.php(90): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#4 C:\\xampp\\htdocs\\myApp\\vendor\\illuminate\\container\\BoundMethod.php(34): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Laravel\\Lumen\\Application), Array, Object(Closure))
+#5 C:\\xampp\\htdocs\\myApp\\vendor\\illuminate\\container\\Container.php(576): Illuminate\\Container\\BoundMethod::call(Object(Laravel\\Lumen\\Application), Array, Array, NULL)
+#6 C:\\xampp\\htdocs\\myApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(376): Illuminate\\Container\\Container->call(Array, Array)
+#7 C:\\xampp\\htdocs\\myApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(342): Laravel\\Lumen\\Application->callControllerCallable(Array, Array)
+#8 C:\\xampp\\htdocs\\myApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(316): Laravel\\Lumen\\Application->callLumenController(Object(App\\Http\\Controllers\\UserController), 'validation', Array)
+#9 C:\\xampp\\htdocs\\myApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(278): Laravel\\Lumen\\Application->callControllerAction(Array)
+#10 C:\\xampp\\htdocs\\myApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(263): Laravel\\Lumen\\Application->callActionOnArrayBasedRoute(Array)
+#11 C:\\xampp\\htdocs\\myApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(165): Laravel\\Lumen\\Application->handleFoundRoute(Array)
+#12 C:\\xampp\\htdocs\\myApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(416): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}(Object(Laravel\\Lumen\\Http\\Request))
+#13 C:\\xampp\\htdocs\\myApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(171): Laravel\\Lumen\\Application->sendThroughPipeline(Array, Object(Closure))
+#14 C:\\xampp\\htdocs\\myApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(108): Laravel\\Lumen\\Application->dispatch(NULL)
+#15 C:\\xampp\\htdocs\\myApp\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#16 {main}
+"} 
+[2020-10-25 17:34:38] local.ERROR: ErrorException: Undefined variable: username in C:\xampp\htdocs\myApp\app\Http\Controllers\UserController.php:35
+Stack trace:
+#0 C:\xampp\htdocs\myApp\app\Http\Controllers\UserController.php(35): Laravel\Lumen\Application->Laravel\Lumen\Concerns\{closure}(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 35, Array)
+#1 [internal function]: App\Http\Controllers\UserController->validation()
+#2 C:\xampp\htdocs\myApp\vendor\illuminate\container\BoundMethod.php(32): call_user_func_array(Array, Array)
+#3 C:\xampp\htdocs\myApp\vendor\illuminate\container\BoundMethod.php(90): Illuminate\Container\BoundMethod::Illuminate\Container\{closure}()
+#4 C:\xampp\htdocs\myApp\vendor\illuminate\container\BoundMethod.php(34): Illuminate\Container\BoundMethod::callBoundMethod(Object(Laravel\Lumen\Application), Array, Object(Closure))
+#5 C:\xampp\htdocs\myApp\vendor\illuminate\container\Container.php(576): Illuminate\Container\BoundMethod::call(Object(Laravel\Lumen\Application), Array, Array, NULL)
+#6 C:\xampp\htdocs\myApp\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(376): Illuminate\Container\Container->call(Array, Array)
+#7 C:\xampp\htdocs\myApp\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(342): Laravel\Lumen\Application->callControllerCallable(Array, Array)
+#8 C:\xampp\htdocs\myApp\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(316): Laravel\Lumen\Application->callLumenController(Object(App\Http\Controllers\UserController), 'validation', Array)
+#9 C:\xampp\htdocs\myApp\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(278): Laravel\Lumen\Application->callControllerAction(Array)
+#10 C:\xampp\htdocs\myApp\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(263): Laravel\Lumen\Application->callActionOnArrayBasedRoute(Array)
+#11 C:\xampp\htdocs\myApp\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(165): Laravel\Lumen\Application->handleFoundRoute(Array)
+#12 C:\xampp\htdocs\myApp\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(416): Laravel\Lumen\Application->Laravel\Lumen\Concerns\{closure}(Object(Laravel\Lumen\Http\Request))
+#13 C:\xampp\htdocs\myApp\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(171): Laravel\Lumen\Application->sendThroughPipeline(Array, Object(Closure))
+#14 C:\xampp\htdocs\myApp\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(108): Laravel\Lumen\Application->dispatch(NULL)
+#15 C:\xampp\htdocs\myApp\public\index.php(28): Laravel\Lumen\Application->run()
+#16 {main} {"exception":"[object] (ErrorException(code: 0): Undefined variable: username at C:\\xampp\\htdocs\\myApp\\app\\Http\\Controllers\\UserController.php:35)
+[stacktrace]
+#0 C:\\xampp\\htdocs\\myApp\\app\\Http\\Controllers\\UserController.php(35): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}(8, 'Undefined varia...', 'C:\\\\xampp\\\\htdocs...', 35, Array)
+#1 [internal function]: App\\Http\\Controllers\\UserController->validation()
+#2 C:\\xampp\\htdocs\\myApp\\vendor\\illuminate\\container\\BoundMethod.php(32): call_user_func_array(Array, Array)
+#3 C:\\xampp\\htdocs\\myApp\\vendor\\illuminate\\container\\BoundMethod.php(90): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#4 C:\\xampp\\htdocs\\myApp\\vendor\\illuminate\\container\\BoundMethod.php(34): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Laravel\\Lumen\\Application), Array, Object(Closure))
+#5 C:\\xampp\\htdocs\\myApp\\vendor\\illuminate\\container\\Container.php(576): Illuminate\\Container\\BoundMethod::call(Object(Laravel\\Lumen\\Application), Array, Array, NULL)
+#6 C:\\xampp\\htdocs\\myApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(376): Illuminate\\Container\\Container->call(Array, Array)
+#7 C:\\xampp\\htdocs\\myApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(342): Laravel\\Lumen\\Application->callControllerCallable(Array, Array)
+#8 C:\\xampp\\htdocs\\myApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(316): Laravel\\Lumen\\Application->callLumenController(Object(App\\Http\\Controllers\\UserController), 'validation', Array)
+#9 C:\\xampp\\htdocs\\myApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(278): Laravel\\Lumen\\Application->callControllerAction(Array)
+#10 C:\\xampp\\htdocs\\myApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(263): Laravel\\Lumen\\Application->callActionOnArrayBasedRoute(Array)
+#11 C:\\xampp\\htdocs\\myApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(165): Laravel\\Lumen\\Application->handleFoundRoute(Array)
+#12 C:\\xampp\\htdocs\\myApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(416): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}(Object(Laravel\\Lumen\\Http\\Request))
+#13 C:\\xampp\\htdocs\\myApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(171): Laravel\\Lumen\\Application->sendThroughPipeline(Array, Object(Closure))
+#14 C:\\xampp\\htdocs\\myApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(108): Laravel\\Lumen\\Application->dispatch(NULL)
+#15 C:\\xampp\\htdocs\\myApp\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#16 {main}
+"} 

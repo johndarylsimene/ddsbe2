@@ -1,8 +1,8 @@
 <?php
     namespace App\Http\Controllers;
-    
     use Illuminate\Http\Request;
 	use Illuminate\Http\Response;
+    use App\Models\UserJob;
     use App\Models\User;
     use App\Traits\ApiResponser;
     use DB;
@@ -49,24 +49,15 @@ Class UserController extends Controller {
     }
 
     public function show(){
-        $users = User::all(); 
-        return $this->successResponse($users);   
+        $user = User::all(); 
+        return $this->successResponse($user);   
     }
 
-    public function addUser(Request $request){
-        $rule=[
-            'username' => 'required|max:20',
-            'password' => 'required|max:20',
-        ];
-        $this->validate($request, $rule);
-        $users = User::create($request -> all());
-        return $this->successResponse($users);
-    }
-
-    public function index($id){$users = User::where('id',$id)->first();
+    public function index($id){
+        $user = User::where('id',$id)->first();
         
-        if ($users){
-            return $this->successResponse($users);
+        if ($user){
+            return $this->successResponse($user);
         }
         else{
            return $this->errorResponse('User not Found',Response::HTTP_NOT_FOUND);
@@ -74,28 +65,25 @@ Class UserController extends Controller {
 
     }
 
-
     public function updateUser(Request $request, $id){
         $rule=[
             'username' => 'max:20',
             'password' => 'max:20',
+            'jobID' => 'required|numeric|min:1|not_in:0',
         ];
 
         $this->validate($request, $rule);
-        $users = User::where('id',$id)->first();
 
-        if($users){
-            $users->fill($request->all());
+        $userjob = UserJob::findOrFail($request->jobID);
+        $user = User::findOrFail($id);
+        $user->fill($request->all());
 
-            if($users->isClean()){
-                return $this->errorResponse("NO CHANGES HAVE BEEN MADE.", Response::HTTP_UNPROCESSABLE_ENTITY);
-            }
+        if($user->isClean()){
+                return $this->errorResponse("At least one value must change", Response::HTTP_UNPROCESSABLE_ENTITY);
         }
-        else{
-            return $this->errorResponse("USER NOT FOUND",Response::HTTP_NOT_FOUND);
-            }
-        $users->save();
-        return $this->successResponse($users);
+
+        $user->save();
+        return $this->successResponse($user);
     }
 
     public function removeUser($id){
@@ -109,6 +97,19 @@ Class UserController extends Controller {
         }
     }
 
+    public function addUser(Request $request ){
+        $rules = [
+        'username' => 'required|max:20',
+        'password' => 'required|max:20',
+        'jobID' => 'required|numeric|min:1|not_in:0',
+        ];
+        $this->validate($request,$rules);
+
+        $userjob = UserJob::findOrFail($request->jobID);
+        $user = User::create($request->all());
+        return $this->successResponse($user,Response::HTTP_CREATED);
+
+    }
 
 }
 
